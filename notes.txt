@@ -1,0 +1,37 @@
+git init -> to initialize git repository.
+
+git status -> to check the status of files.
+
+git add <filename> -> to add files to the staging area.
+
+git commit -m "message" -> to commit the changes.
+
+git reset "hash id" -> to go back to previous change.
+
+git log -> to see all commits.
+
+git stash -> to send changes to back stage, not visible if git status.
+
+git stash pop -> to get back, back stage changes.
+
+git stash clear -> to clear the back stage changes.
+
+git remote add origin "url of git repository" -> this will connect your local repository with your online 
+repository in github account, for that create a github repository in the github account and copy the url of that
+repository. Run the upper command to connect, you can write anything at "origin", but mostly if your url is in your
+own account, then writing "origin" is preferred.
+
+"remote" means you are working with urls.
+"add" basically means you are adding a url.
+"origin" means the name for the url.
+
+git remote -v -> this will show all the url that are attached to this folder.
+
+git push origin master -> to share changes to your online github account, master means branch here.
+
+git branch "branch-name" -> to create a new branch, by default there is only master branch.
+
+git checkout "branch-name" -> to change branch
+
+git fetch --all --prune -> so that all the changes in the other person main branch are also updated in our forked
+copy.
