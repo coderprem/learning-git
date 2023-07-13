@@ -1,0 +1,54 @@
+git init -> to initialize git repository.
+
+git status -> to check the status of files.
+
+git add <filename> -> to add files to the staging area.
+
+git commit -m "message" -> to commit the changes.
+
+git reset "hash id" -> to go back to previous change.
+
+git log -> to see all commits.
+
+git stash -> to send changes to back stage, not visible if git status.
+
+git stash pop -> to get back, back stage changes.
+
+git stash clear -> to clear the back stage changes.
+
+git remote add origin "url of git repository" -> this will connect your local repository with your online 
+repository in github account, for that create a github repository in the github account and copy the url of that
+repository. Run the upper command to connect, you can write anything at "origin", but mostly if your url is in your
+own account, then writing "origin" is preferred.
+
+"remote" means you are working with urls.
+"add" basically means you are adding a url.
+"origin" means the name for the url.
+
+git remote -v -> this will show all the url that are attached to this folder.
+
+git push origin master -> to share changes to your online github account, master means branch here.
+
+git branch "branch-name" -> to create a new branch, by default there is only master branch.
+
+git checkout "branch-name" -> to change branch
+
+To update your local branch, fork and main branch of upstream you have to perform following steps:
+This can be done via gui on the website too by clicking sync fork button.
+
+git fetch --all --prune -> so that all the changes in the other person main branch are also updated in our forked
+copy.
+git reset --hard upstream/main -> this step is also required to achieve upper goal.
+git push origin main -> main why? because you will see updation in your fork.
+
+or this can be done through single command:
+git pull upstream main -> fetching all the details of upstream
+git push origin main -> pushing into our own fork
+
+Squishing:
+if you have committed something similar like creating 4 files named 1,2,3,4 and you wrote 4 different commits for them,
+you can merge these commits into single commit through following commands ->
+1. copy the hash id of previous commit(before 4 files commits) 
+2. git rebase -i "hash id" -> change pick to s for Squishing, hit :x
+3. change the commit message, then hit :x
+
